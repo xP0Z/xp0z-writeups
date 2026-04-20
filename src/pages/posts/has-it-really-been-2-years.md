@@ -16,7 +16,7 @@ event: "CIT@CTF"
 **1. Initial Image Analysis**
 The provided image shows a very plain-looking sandwich (pickles on a bun) inside a cardboard container. By analyzing the wrapper paper beneath the food, we can decipher fragments of a logo spelling out **WOW CAFE**.
 
-![WOW Cafe Logo Identification](/ep0z-writeups/images/has_it_really_been_2_years-01.png)
+![WOW Cafe Logo Identification](/xp0z-writeups/images/has_it_really_been_2_years-01.png)
 
 <br>
 
@@ -30,14 +30,14 @@ Realizing that generic menu searches weren't working, I pivoted to contextual cl
 **3. OSINT via Social Media**
 I navigated to the official Sodexo dining website for UNH to check the retail menus. The item wasn't listed on the standard menu, but at the bottom of the webpage, I found a link to their official Instagram handle (`@unewhavendining`).
 
-![University of New Haven Dining Instagram Link](/ep0z-writeups/images/has_it_really_been_2_years-02.jpg)
+![University of New Haven Dining Instagram Link](/xp0z-writeups/images/has_it_really_been_2_years-02.jpg)
 
 <br>
 
 **4. Timeline Scraping**
 The title of the challenge is a massive clue: *"Has it really been 2 years?"* Since the CTF took place in April 2026, I scrolled back exactly two years on their Instagram feed to April 2024. On April 3, 2024, I found a promotional post for a limited-time item that perfectly matches the bun, pickles, and presentation: **The Chick-N-Dawg**.
 
-![Instagram post showing the Chick-N-Dawg in April 2024](/ep0z-writeups/images/has_it_really_been_2_years-03.png)
+![Instagram post showing the Chick-N-Dawg in April 2024](/xp0z-writeups/images/has_it_really_been_2_years-03.png)
 
 <br>
 
