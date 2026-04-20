@@ -64,7 +64,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: |
+          rm -f package-lock.json
+          npm install
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
         run: |
