@@ -39,7 +39,7 @@ The hashcat run successfully cracked the password: **`cherell`**.
 **2. Document Analysis & Username Extraction**
 Unlocking the PDF revealed a "Subject Dossier" from the Cultural Property Risk Cell. Scanning the document, I identified the suspect's primary alias.
 
-![PDF Subject Dossier showing handle VitrineFox](/images/Exit-01.png)
+![PDF Subject Dossier showing handle VitrineFox](/ep0z-writeups/images/Exit-01.png)
 
 The most probable handle was listed as **`VitrineFox`**.
 
@@ -48,7 +48,7 @@ The most probable handle was listed as **`VitrineFox`**.
 **3. Username Enumeration (WhatsMyName)**
 With a solid handle, I moved to username enumeration. While `sherlock` via CLI is an option, I used the web-based tool **WhatsMyNameApp** for faster visual parsing. Searching for `vitrinefox` returned multiple active profiles across the web.
 
-![WhatsMyNameApp results for vitrinefox](/images/Exit-02.jpg)
+![WhatsMyNameApp results for vitrinefox](/ep0z-writeups/images/Exit-02.jpg)
 
 The results provided a crucial pivot point: a Linktree profile (`linktr.ee/vitrinefox`).
 
@@ -61,7 +61,7 @@ I initially investigated the X account and found a post featuring an image of th
 
 Recalibrating and remembering the other accounts listed on the Linktree, I pivoted to their **LinkedIn** profile (`linkedin.com/in/vitrine-fox-424b153b3`). Opening the "Contact info" modal revealed an exposed ProtonMail address.
 
-![LinkedIn contact info showing Remy's email address](/images/Exit-03.png)
+![LinkedIn contact info showing Remy's email address](/ep0z-writeups/images/Exit-03.png)
 
 The email address `remy.beauvillier@proton.me` clearly exposes the thief's real first and last name.
 

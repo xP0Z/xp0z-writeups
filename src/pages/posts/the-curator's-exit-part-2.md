@@ -21,7 +21,7 @@ The phrase "Check the archives" immediately points to the Internet Archive (arch
 
 Navigating directly to the profile paid off instantly. The target had placed the flag in plain text right inside their bio description.
 
-![Internet Archive profile for vitrinefox showing the flag](/images/exit_part_two-01.png)
+![Internet Archive profile for vitrinefox showing the flag](/ep0z-writeups/images/exit_part_two-01.png)
 
 <br>
 

@@ -21,7 +21,7 @@ Since the challenge asks for a professional acknowledgment regarding a security 
 
 Scrolling down his profile to the **Honors & awards** section, we found the exact acknowledgment. It states he was recognized for identifying and responsibly disclosing a security vulnerability, and it was issued by the Department of Energy.
 
-![LinkedIn Honors and Awards for Anthony Yannella](/images/yannella.png)
+![LinkedIn Honors and Awards for Anthony Yannella](/ep0z-writeups/images/yannella.png)
 
 <br>
 

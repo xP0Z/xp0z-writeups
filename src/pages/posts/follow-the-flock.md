@@ -17,14 +17,14 @@ event: "CIT@CTF"
 **1. Decoding the Hint**
 The hint at the bottom of the prompt gives us the exact city. A quick search for a city in Connecticut famous for its pizza style immediately reveals **New Haven**, which is globally known for "apizza".
 
-![Google Search for Connecticut Pizza](/images/flock-01.png)
+![Google Search for Connecticut Pizza](/ep0z-writeups/images/flock-01.png)
 
 <br>
 
 **2. Locating the Target**
 Knowing the city and the specific pizza style, the next step is to search for "apizza New Haven locations." Looking at the most prominent results and mapping them out leads directly to one of the most famous spots: Modern Apizza, which is situated on **State Street**. 
 
-![Google Maps search for apizza new haven](/images/flock-02.jpg)
+![Google Maps search for apizza new haven](/ep0z-writeups/images/flock-02.jpg)
 
 <br>
 

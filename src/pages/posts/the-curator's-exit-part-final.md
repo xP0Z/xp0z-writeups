@@ -17,14 +17,14 @@ The prompt mentions our target is "something of a builder." Referring back to th
 **2. Profile Analysis**
 Navigating directly to their profile at `https://pcpartpicker.com/user/vitrinefox/`, we find a very brief bio. The target states "This is by far my favorite build" and provides a direct link to a Dropbox file.
 
-![PCPartPicker profile with Dropbox link](/images/exit_final_01.png)
+![PCPartPicker profile with Dropbox link](/ep0z-writeups/images/exit_final_01.png)
 
 <br>
 
 **3. Retrieving the Payload**
 Following the Dropbox link (`CuratorsExit-Final.pdf`), the document opens to reveal the final flag sitting right in the center of the page.
 
-![Dropbox PDF displaying the flag](/images/exit_final_02.png)
+![Dropbox PDF displaying the flag](/ep0z-writeups/images/exit_final_02.png)
 
 <br>
 

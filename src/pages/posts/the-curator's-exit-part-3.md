@@ -15,7 +15,7 @@ event: "CIT@CTF"
 **1. Re-visiting the X Account**
 In the first part of this series, while tracing the `vitrinefox` alias, I found their X (Twitter) profile. They had a single post with the caption "Post score = Vacation Mode Activated" and a photo of a stone building. While it was a dead end for finding their name earlier, it is the exact puzzle piece needed for this challenge.
 
-![X profile for vitrinefox showing the location image](/images/exit_part_three-01.jpg)
+![X profile for vitrinefox showing the location image](/ep0z-writeups/images/exit_part_three-01.jpg)
 
 <br>
 

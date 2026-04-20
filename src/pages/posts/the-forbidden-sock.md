@@ -17,11 +17,11 @@ event: "CIT@CTF"
 **1. Initial Image Analysis & Reverse Search**
 We are provided with a photo taken from the stands of a baseball stadium during a day game. 
 
-![Original Target Photo](/images/sock-01.jpg)
+![Original Target Photo](/ep0z-writeups/images/sock-01.jpg)
 
 Running this image through Google Reverse Image Search (Google Lens) immediately identifies the iconic green walls and stadium architecture as **Fenway Park**, home of the Boston Red Sox. 
 
-![Google Lens Result identifying Fenway Park](/images/sock-02.jpg)
+![Google Lens Result identifying Fenway Park](/ep0z-writeups/images/sock-02.jpg)
 
 <br>
 
@@ -32,7 +32,7 @@ By comparing the perspective of the original photo—specifically the angle look
 
 The view aligns perfectly with the perspective from **Section 7** along the right field line.
 
-![MLB 3D Seat Map matching Section 7](/images/sock-03.jpg)
+![MLB 3D Seat Map matching Section 7](/ep0z-writeups/images/sock-03.jpg)
 
 <br>
 

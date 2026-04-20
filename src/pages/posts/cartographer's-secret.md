@@ -23,7 +23,7 @@ However, because I keep meticulous notes during enumeration, I realized I could 
 **2. Re-using Reconnaissance Data**
 During the initial username enumeration phase of *The Curator's Exit*, I ran the target alias `vitrinefox` through WhatsMyNameApp. One of the positive hits was an **OpenStreetMap** profile.
 
-![WhatsMyNameApp results showing OpenStreetMap](/images/Exit-02.jpg)
+![WhatsMyNameApp results showing OpenStreetMap](/ep0z-writeups/images/Exit-02.jpg)
 
 <br>
 
@@ -32,7 +32,7 @@ Rather than randomly searching the map of New Haven, I went straight to the sour
 
 Looking at the user's activity history, I noticed they had recently made three specific map edits (changesets) right around Bergami Hall. Inspecting the changeset history log revealed the flag sitting directly in plain sight as an update comment.
 
-![OpenStreetMap changesets revealing the flag](/images/cartographers-secret.jpg)
+![OpenStreetMap changesets revealing the flag](/ep0z-writeups/images/cartographers-secret.jpg)
 
 <br>
 
