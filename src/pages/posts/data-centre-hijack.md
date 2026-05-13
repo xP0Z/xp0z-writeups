@@ -18,7 +18,7 @@ event: "RAMunchers CTF"
 ### > METHODOLOGY
 
 **1. Reverse Image Search**
-We are provided with the drone picture above, showing a large data center facility adjacent to a massive solar array and a distinct highway curve. To identify the exact location and the company, the most effective method is a reverse image search. 
+We are provided with an image of data center. To identify the exact location and the company, the most effective method is a reverse image search. 
 
 Uploading the target image to Google Lens immediately returns an exact visual match. The related search explicitly identifies the facility as the **Google data center in Saint-Ghislain, Belgium**.
 
@@ -27,7 +27,7 @@ Uploading the target image to Google Lens immediately returns an exact visual ma
 <br>
 
 ### > THE FLAG
-Using the required format `RMCTF{City-Country-Company}` and our gathered intelligence:
+Using the required format `RMCTF{City-Country-Company}` and our gathered information:
 * **City:** Saint-Ghislain
 * **Country:** Belgium
 * **Company:** Google
