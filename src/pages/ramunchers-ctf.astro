@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+
+// Filter for the new event name
+let ramunchersPosts = allPosts.filter(post => post.frontmatter.event === 'RAMunchers CTF');
+
+// Leave this array empty for now. Add your post titles here as you write them to sort them!
+const customOrder = [];
+
+// Sort the posts based on the array above
+ramunchersPosts.sort((a, b) => {
+  // If the array is empty or posts aren't in it yet, this will just leave them as-is
+  if(customOrder.length === 0) return 0;
+  return customOrder.indexOf(a.frontmatter.title) - customOrder.indexOf(b.frontmatter.title);
+});
+---
+
+<Layout>
+  <div style="margin-bottom: 25px;">
+    <a href="/xp0z-writeups/" style="font-size: 0.9em;">&lt;&lt; RETURN TO DIRECTORY</a>
+  </div>
+
+  <h2>> RAMunchers CTF</h2>
+  
+  <div style="color: var(--text-muted); line-height: 1.6; margin-bottom: 30px; padding-left: 10px; border-left: 2px solid var(--border-color);">
+    <strong>TARGET URL:</strong> <a href="https://ctf.ramunchers.com/" target="_blank" style="color: var(--accent-glow); text-transform: none; text-decoration: underline;">https://ctf.ramunchers.com/</a><br>
+    <strong>BEGINS:</strong> Sunday, May 10, 2026 @ 1:30 PM IST<br>
+    <strong>ENDS:</strong> Wednesday, May 13, 2026 @ 8:30 PM IST
+    
+    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--border-color); color: var(--accent-glow); font-size: 0.95em; letter-spacing: 1px;">
+      <span style="color: var(--text-muted); font-size: 0.85em;">TEAM:</span> Rayleigh &nbsp;&nbsp;//&nbsp;&nbsp;
+      <span style="color: var(--text-muted); font-size: 0.85em;">RANK:</span> &nbsp;&nbsp;//&nbsp;&nbsp;
+      <span style="color: var(--text-muted); font-size: 0.85em;">SCORE:</span> 850 pts
+    </div>
+  </div>
+
+  <div class="box">
+    <h3 style="border: none; color: var(--accent-glow); margin-bottom: 5px;">> ACQUIRED TARGETS</h3>
+    
+    <ul style="list-style: none; padding: 0;">
+      {ramunchersPosts.length > 0 ? (
+        ramunchersPosts.map((post) => (
+          <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0; display: flex; align-items: center;">
+            <span style="color: var(--text-muted); margin-right: 15px;">[+]</span>
+            <a href={post.url} style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
+              {post.frontmatter.title}
+            </a>
+          </li>
+        ))
+      ) : (
+        <li style="padding: 15px 0; color: var(--text-muted); font-style: italic;">
+          Logging initial access... awaiting writeup files.
+        </li>
+      )}
+    </ul>
+  </div>
+</Layout>
