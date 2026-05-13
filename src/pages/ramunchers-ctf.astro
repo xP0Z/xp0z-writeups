@@ -5,8 +5,14 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
 // Filter for the new event name
 let ramunchersPosts = allPosts.filter(post => post.frontmatter.event === 'RAMunchers CTF');
 
-// Leave this array empty for now. Add your post titles here as you write them to sort them!
-const customOrder = [];
+// Add your post titles here as you write them to sort them!
+const customOrder = [
+  "Data Centre Hijack",
+  "AI or Real?",
+  "Gibson makes a Mistake",
+  "Mission: Find the Base",
+  "Office Switching"
+];
 
 // Sort the posts based on the array above
 ramunchersPosts.sort((a, b) => {
