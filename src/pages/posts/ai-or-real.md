@@ -13,7 +13,7 @@ event: "RAMunchers CTF"
 ### > METHODOLOGY
 
 **1. Locating the Real Target**
-Initial username enumeration on `starring1367` using Sherlock yielded inconsistent results, so I pivoted to IDCrawl. This successfully linked the username to a real Instagram profile belonging to Charlie Jacobs.
+Initial username search on `starring1367` using Sherlock yielded wierd results, so I pivoted to IDCrawl. This successfully linked the username to a real Instagram profile belonging to Charlie Jacobs.
 
 ![Real Instagram Profile](/xp0z-writeups/images/aiorreal01.jpg)
 
