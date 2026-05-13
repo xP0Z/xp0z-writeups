@@ -58,7 +58,7 @@ bluepeakcyber.co.uk.	300	IN	TXT	"v=spf1 +a +mx +ip4:149.255.62.126 include:relay
 </pre>
 </div>
 
-This DNS lookup leaks a highly specific, deeply nested subdomain assigned to the infrastructure team: `coventry.r032.bluepeakcyber.co.uk`.
+This DNS lookup leaks a nested subdomain assigned to the infrastructure team: `coventry.r032.bluepeakcyber.co.uk`.
 
 <br>
 
