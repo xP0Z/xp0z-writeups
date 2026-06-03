@@ -1,4 +1,4 @@
-import { getWriteupBySlug } from '../../../lib/markdown';
+import { getWriteupBySlug, getWriteupsByEvent } from '../../../lib/markdown';
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -8,6 +8,13 @@ import Contact from '../../../components/Contact';
 import CurveFooter from '../../../components/CurveFooter';
 import styles from './style.module.scss';
 import Link from 'next/link';
+
+export function generateStaticParams() {
+  const writeups = getWriteupsByEvent("CIT@CTF");
+  return writeups.map((writeup) => ({
+    slug: writeup.slug,
+  }));
+}
 
 export default async function WriteupPage({ params }) {
   const { slug } = await params;
