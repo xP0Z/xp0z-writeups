@@ -1,0 +1,29 @@
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f4f4;
+  --text-primary: #1c1d20;
+  --text-secondary: #000000;
+  --border-color: #d3d3d3; // For project borders
+  --border-dashed: rgba(0, 0, 0, 0.15);
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --contact-bg: #141516;
+}
+
+[data-theme='dark'] {
+  --bg-primary: transparent;
+  --bg-secondary: transparent;
+  --text-primary: #ffffff;
+  --text-secondary: #f4f4f4;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --border-dashed: rgba(255, 255, 255, 0.15);
+  --hover-bg: rgba(255, 255, 255, 0.05);
+  --contact-bg: transparent;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden; /* Hide scrollbars */
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

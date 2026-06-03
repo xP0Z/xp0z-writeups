@@ -3,116 +3,175 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <h2>> OSINT ARSENAL</h2>
-  <p style="line-height: 1.6;">
-    A directory of essential tools, search engines, and frameworks used for open-source intelligence gathering and CTF challenges.
-  </p>
+  <div class="page-header gsap-reveal">
+    <h1 class="page-title">OSINT Arsenal</h1>
+    <p class="subtitle">
+      A directory of essential tools, search engines, and frameworks used for open-source intelligence gathering and CTF challenges.
+    </p>
+  </div>
 
-  <div class="box" style="margin-top: 40px;">
-    <h3 style="border: none; color: var(--accent-glow); margin-bottom: 5px;">> SEARCH & REVERSE IMAGE</h3>
+  <div class="tools-category">
+    <div class="category-header gsap-reveal">
+      <span class="category-icon">Search</span>
+      <h2>Search & Reverse Image</h2>
+    </div>
     
-    <ul style="list-style: none; padding: 0;">
-      <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0;">
-        <a href="https://www.google.com/" target="_blank" style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
-          Google (Dorks)
-        </a>
-        <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; margin-bottom: 0;">
-          Primary search engine. Essential for advanced search operators (Google Dorks) to uncover exposed directories, specific file types, and cached data.
-        </p>
-      </li>
+    <div class="tools-grid gsap-stagger-container">
+      <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer" class="tool-card gsap-stagger-item magnetic-el">
+        <div class="tool-title">Google (Dorks)</div>
+        <div class="tool-desc">Primary search engine. Essential for advanced search operators (Google Dorks) to uncover exposed directories, specific file types, and cached data.</div>
+      </a>
       
-      <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0;">
-        <a href="https://yandex.com/images/" target="_blank" style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
-          Yandex Images
-        </a>
-        <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; margin-bottom: 0;">
-          The most powerful reverse image search engine for facial recognition and identifying locations, particularly effective for Eastern European regions.
-        </p>
-      </li>
+      <a href="https://yandex.com/images/" target="_blank" rel="noopener noreferrer" class="tool-card gsap-stagger-item magnetic-el">
+        <div class="tool-title">Yandex Images</div>
+        <div class="tool-desc">The most powerful reverse image search engine for facial recognition and identifying locations, particularly effective for Eastern European regions.</div>
+      </a>
 
-      <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0;">
-        <a href="https://tineye.com/" target="_blank" style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
-          TinEye
-        </a>
-        <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; margin-bottom: 0;">
-          Reverse image search tool excellent for finding the oldest chronological upload of an image to track down original sources.
-        </p>
-      </li>
-    </ul>
+      <a href="https://tineye.com/" target="_blank" rel="noopener noreferrer" class="tool-card gsap-stagger-item magnetic-el">
+        <div class="tool-title">TinEye</div>
+        <div class="tool-desc">Reverse image search tool excellent for finding the oldest chronological upload of an image to track down original sources.</div>
+      </a>
+    </div>
   </div>
 
-  <div class="box" style="margin-top: 20px;">
-    <h3 style="border: none; color: var(--accent-glow); margin-bottom: 5px;">> USERNAME & SOCIAL SEARCH</h3>
+  <div class="tools-category">
+    <div class="category-header gsap-reveal">
+      <span class="category-icon">Identity</span>
+      <h2>Username & Social Search</h2>
+    </div>
     
-    <ul style="list-style: none; padding: 0;">
-      <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0;">
-        <a href="https://whatsmynameapp.net/" target="_blank" style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
-          WhatsMyNameApp
-        </a>
-        <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; margin-bottom: 0;">
-          Web-based username enumeration tool that scans hundreds of sites to find where a specific alias is registered.
-        </p>
-      </li>
+    <div class="tools-grid gsap-stagger-container">
+      <a href="https://whatsmynameapp.net/" target="_blank" rel="noopener noreferrer" class="tool-card gsap-stagger-item magnetic-el">
+        <div class="tool-title">WhatsMyNameApp</div>
+        <div class="tool-desc">Web-based username enumeration tool that scans hundreds of sites to find where a specific alias is registered.</div>
+      </a>
 
-      <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0;">
-        <a href="https://github.com/sherlock-project/sherlock" target="_blank" style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
-          Sherlock (CLI)
-        </a>
-        <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; margin-bottom: 0;">
-          Powerful command-line Python tool to hunt down social media accounts by username across social networks.
-        </p>
-      </li>
+      <a href="https://github.com/sherlock-project/sherlock" target="_blank" rel="noopener noreferrer" class="tool-card gsap-stagger-item magnetic-el">
+        <div class="tool-title">Sherlock (CLI)</div>
+        <div class="tool-desc">Powerful command-line Python tool to hunt down social media accounts by username across social networks.</div>
+      </a>
 
-      <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0;">
-        <a href="https://www.idcrawl.com/username-search" target="_blank" style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
-          IDCrawl
-        </a>
-        <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; margin-bottom: 0;">
-          Free people search engine designed to organize social network profiles, public records, and surface-level data tied to a handle.
-        </p>
-      </li>
+      <a href="https://www.idcrawl.com/username-search" target="_blank" rel="noopener noreferrer" class="tool-card gsap-stagger-item magnetic-el">
+        <div class="tool-title">IDCrawl</div>
+        <div class="tool-desc">Free people search engine designed to organize social network profiles, public records, and surface-level data tied to a handle.</div>
+      </a>
 
-      <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0;">
-        <a href="https://www.social-searcher.com/google-social-search/" target="_blank" style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
-          Social Searcher
-        </a>
-        <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; margin-bottom: 0;">
-          Real-time social media search engine to monitor public mentions, keywords, and specific account activities.
-        </p>
-      </li>
-    </ul>
+      <a href="https://www.social-searcher.com/google-social-search/" target="_blank" rel="noopener noreferrer" class="tool-card gsap-stagger-item magnetic-el">
+        <div class="tool-title">Social Searcher</div>
+        <div class="tool-desc">Real-time social media search engine to monitor public mentions, keywords, and specific account activities.</div>
+      </a>
+    </div>
   </div>
 
-  <div class="box" style="margin-top: 20px;">
-    <h3 style="border: none; color: var(--accent-glow); margin-bottom: 5px;">> ARCHIVES</h3>
+  <div class="tools-category">
+    <div class="category-header gsap-reveal">
+      <span class="category-icon">History</span>
+      <h2>Archives</h2>
+    </div>
     
-    <ul style="list-style: none; padding: 0;">
-      <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0;">
-        <a href="https://archive.org/" target="_blank" style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
-          Internet Archive (Wayback Machine)
-        </a>
-        <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; margin-bottom: 0;">
-          The ultimate historical web archive. Crucial for viewing deleted websites, past iterations of social profiles, and historical data dumps.
-        </p>
-      </li>
+    <div class="tools-grid gsap-stagger-container">
+      <a href="https://archive.org/" target="_blank" rel="noopener noreferrer" class="tool-card gsap-stagger-item magnetic-el">
+        <div class="tool-title">Internet Archive</div>
+        <div class="tool-desc">The ultimate historical web archive. Crucial for viewing deleted websites, past iterations of social profiles, and historical data dumps.</div>
+      </a>
 
-      <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0;">
-        <a href="https://archive.ph/" target="_blank" style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
-          Archive.today
-        </a>
-        <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; margin-bottom: 0;">
-          Creates a permanent snapshot of a webpage. Highly effective for preserving evidence before it gets deleted, and often bypasses standard paywalls.
-        </p>
-      </li>
+      <a href="https://archive.ph/" target="_blank" rel="noopener noreferrer" class="tool-card gsap-stagger-item magnetic-el">
+        <div class="tool-title">Archive.today</div>
+        <div class="tool-desc">Creates a permanent snapshot of a webpage. Highly effective for preserving evidence before it gets deleted, and often bypasses standard paywalls.</div>
+      </a>
 
-      <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0;">
-        <a href="https://ghostarchive.org/" target="_blank" style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
-          GhostArchive
-        </a>
-        <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; margin-bottom: 0;">
-          Alternative web and YouTube video archive. Useful for capturing media that might be subject to takedowns.
-        </p>
-      </li>
-    </ul>
+      <a href="https://ghostarchive.org/" target="_blank" rel="noopener noreferrer" class="tool-card gsap-stagger-item magnetic-el">
+        <div class="tool-title">GhostArchive</div>
+        <div class="tool-desc">Alternative web and YouTube video archive. Useful for capturing media that might be subject to takedowns.</div>
+      </a>
+    </div>
   </div>
 </Layout>
+
+<style>
+  .page-header {
+    text-align: left;
+    margin-bottom: 80px;
+    padding-top: 40px;
+    max-width: 800px;
+  }
+  
+  .page-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 600px;
+  }
+  
+  .tools-category {
+    margin-bottom: 80px;
+  }
+  
+  .category-header {
+    margin-bottom: 30px;
+  }
+  
+  .category-icon {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--btn-secondary-bg);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 15px;
+  }
+  
+  .category-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #000000;
+    letter-spacing: -0.03em;
+  }
+  
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .tool-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: transparent;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: background 0.3s ease;
+  }
+  
+  .tool-card:hover {
+    background: var(--btn-secondary-bg);
+  }
+  
+  .tool-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+  
+  .tool-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+</style>

@@ -4,7 +4,6 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
 
 let citCtfPosts = allPosts.filter(post => post.frontmatter.event === 'CIT@CTF');
 
-// Your exact custom order
 const customOrder = [
   "Follow the Flock",
   "Yannella",
@@ -17,43 +16,226 @@ const customOrder = [
   "Cartographer's Secret"
 ];
 
-// Sort the posts based on the array above
 citCtfPosts.sort((a, b) => {
-  return customOrder.indexOf(a.frontmatter.title) - customOrder.indexOf(b.frontmatter.title);
+  let indexA = customOrder.indexOf(a.frontmatter.title);
+  let indexB = customOrder.indexOf(b.frontmatter.title);
+  if (indexA === -1) indexA = 999;
+  if (indexB === -1) indexB = 999;
+  return indexA - indexB;
 });
 ---
 
 <Layout>
-  <div style="margin-bottom: 25px;">
-    <a href="/" style="font-size: 0.9em;">&lt;&lt; RETURN TO DIRECTORY</a>
-  </div>
-
-  <h2>> CIT@CTF</h2>
-  
-  <div style="color: var(--text-muted); line-height: 1.6; margin-bottom: 30px; padding-left: 10px; border-left: 2px solid var(--border-color);">
-    <strong>TARGET URL:</strong> <a href="https://ctf.cyber-cit.club/" target="_blank" style="color: var(--accent-glow); text-transform: none; text-decoration: underline;">https://ctf.cyber-cit.club/</a><br>
-    <strong>BEGINS:</strong> Friday, April 17, 2026 @ 9:30 PM<br>
-    <strong>ENDS:</strong> Monday, April 20, 2026 @ 12:30 AM
+  <div class="event-header gsap-reveal">
+    <a href="/xp0z-writeups/" class="back-btn">&larr; Directory</a>
+    <h1 class="event-title">CIT@CTF</h1>
     
-    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--border-color); color: var(--accent-glow); font-size: 0.95em; letter-spacing: 1px;">
-      <span style="color: var(--text-muted); font-size: 0.85em;">TEAM:</span> Rayleigh &nbsp;&nbsp;//&nbsp;&nbsp;
-      <span style="color: var(--text-muted); font-size: 0.85em;">RANK:</span> 87th &nbsp;&nbsp;//&nbsp;&nbsp;
-      <span style="color: var(--text-muted); font-size: 0.85em;">SCORE:</span> 20892 pts
+    <div class="meta-tags">
+      <span class="pill-tag">Status: Concluded</span>
+      <span class="pill-tag">Target: ctf.cyber-cit.club</span>
+      <span class="pill-tag">Apr 17 - Apr 20, 2026</span>
+    </div>
+    
+    <div class="stats-grid">
+      <div class="stat"><span class="stat-label">Team</span><span class="stat-val">Rayleigh</span></div>
+      <div class="stat"><span class="stat-label">Rank</span><span class="stat-val">87th</span></div>
+      <div class="stat"><span class="stat-label">Score</span><span class="stat-val">20,892</span></div>
     </div>
   </div>
 
-  <div class="box">
-    <h3 style="border: none; color: var(--accent-glow); margin-bottom: 5px;">> ACQUIRED TARGETS</h3>
+  <div class="targets-section">
+    <h2 class="section-title gsap-reveal" style="text-align: center;">Acquired Targets</h2>
     
-    <ul style="list-style: none; padding: 0;">
-      {citCtfPosts.map((post) => (
-        <li style="border-bottom: 1px dashed var(--border-color); padding: 15px 0; display: flex; align-items: center;">
-          <span style="color: var(--text-muted); margin-right: 15px;">[+]</span>
-          <a href={post.url} style="color: var(--accent-glow); font-weight: bold; font-size: 1.1em;">
-            {post.frontmatter.title}
+    <div class="timeline-3d-container">
+      <div class="timeline-spine"></div>
+      {citCtfPosts.map((post, index) => (
+        <div class={`timeline-node ${index % 2 === 0 ? 'node-left' : 'node-right'}`}>
+          <div class="node-dot"></div>
+          <a href={post.url} class="target-card timeline-card">
+            <div class="target-name">{post.frontmatter.title}</div>
+            <div class="target-arrow">&rarr;</div>
           </a>
-        </li>
+        </div>
       ))}
-    </ul>
+    </div>
   </div>
 </Layout>
+
+<style>
+  .event-header {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    padding-top: 40px;
+  }
+  
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 40px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .back-btn:hover { color: var(--text-main); }
+  
+  .event-title {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    margin-bottom: 30px;
+    color: #000000;
+  }
+  
+  .meta-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 50px;
+  }
+  
+  .pill-tag {
+    padding: 8px 20px;
+    background: var(--btn-secondary-bg);
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+  
+  .stat-val {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+  
+  .targets-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    letter-spacing: -0.03em;
+    color: #000000;
+  }
+  
+  .timeline-3d-container {
+    position: relative;
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 40px 0;
+    perspective: 1500px;
+  }
+  
+  .timeline-spine {
+    position: absolute;
+    top: 0; bottom: 0; left: 50%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--border-color) 10%, var(--border-color) 90%, transparent);
+    transform: translateX(-50%);
+  }
+  
+  .timeline-node {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform-style: preserve-3d;
+  }
+  
+  .timeline-node.node-left {
+    padding-right: 40px;
+    left: 0;
+    transform-origin: right center;
+  }
+  
+  .timeline-node.node-right {
+    justify-content: flex-start;
+    padding-left: 40px;
+    left: 50%;
+    transform-origin: left center;
+  }
+  
+  .node-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid #000000;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+  
+  .node-left .node-dot { right: -7px; }
+  .node-right .node-dot { left: -7px; }
+  
+  .timeline-card {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .target-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .target-card:hover {
+    transform: translateX(10px);
+    border-color: #000000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  .target-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .target-arrow {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .target-card:hover .target-arrow {
+    transform: translateX(5px);
+    color: #000000;
+  }
+</style>

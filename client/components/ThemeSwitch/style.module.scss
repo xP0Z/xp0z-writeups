@@ -1,0 +1,85 @@
+.themeSwitchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.themeSwitch {
+  position: relative;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  margin-left: 20px;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    .tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    
+    &:hover {
+      background-color: transparent; // No hover effect
+    }
+  }
+}
+
+.tooltip {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: none;
+  white-space: nowrap;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--text-primary) transparent;
+  }
+  
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.themeSwitchFallback {
+  width: 70px;
+  height: 40px;
+  margin-left: 20px;
+}

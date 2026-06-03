@@ -7,7 +7,7 @@ event: "RAMunchers CTF"
 <div class="box" style="border-color: var(--text-muted); background-color: rgba(255,255,255,0.02);">
   <h3 style="margin-top: 0; border: none; color: var(--text-muted);">> CHALLENGE DESCRIPTION</h3>
   <p>An IT company allowed Gibson to "optimise" their office locations. Your goal is to find the flag that shows where the Infrastructure team has been moved to.</p>
-  <p><strong>TARGET:</strong> <a href="https://bluepeakcyber.co.uk/" target="_blank" style="color: var(--accent-glow);">https://bluepeakcyber.co.uk/</a></p>
+  <p><strong>TARGET:</strong> <a href="https://bluepeakcyber.co.uk/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-glow);">https://bluepeakcyber.co.uk/</a></p>
   <p style="margin-bottom: 5px;"><strong>FLAG FORMAT:</strong> <code>RMCTF{XXXXXXXXXXXX}</code></p>
 </div>
 

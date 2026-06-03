@@ -1,0 +1,119 @@
+.main {
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+.pageContent {
+    background-color: var(--bg-secondary);
+    position: relative;
+    z-index: 1;
+    padding-top: 200px;
+    transition: background-color 0.3s ease;
+}
+
+.introSection {
+    padding: 0 200px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+
+    .heroText {
+        width: 100%;
+        max-width: 1400px;
+        h2 {
+            font-size: 6vw;
+            font-weight: 400;
+            margin: 0;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+    }
+}
+
+.toolsSection {
+    padding: 0 200px;
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .toolsContainer {
+        width: 100%;
+        max-width: 1400px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        .toolsGrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+
+            .toolItem {
+                display: flex;
+                flex-direction: column;
+
+                .number {
+                    font-size: 14px;
+                    font-weight: 300;
+                    color: var(--text-secondary);
+                    border-bottom: 1px solid var(--border-color, #e0e0e0);
+                    padding-bottom: 20px;
+                    margin-bottom: 30px;
+                }
+
+                h4 {
+                    font-size: 2vw;
+                    font-weight: 400;
+                    margin: 0 0 20px 0;
+                }
+
+                p {
+                    font-size: 1vw;
+                    font-weight: 300;
+                    line-height: 1.6;
+                    color: var(--text-secondary);
+                    margin: 0 0 30px 0;
+                    flex-grow: 1;
+                }
+                
+                a {
+                    font-size: 14px;
+                    color: #455CE9;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    transition: opacity 0.2s;
+                    
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .introSection {
+        padding: 0 20px;
+        .heroText h2 { font-size: 10vw; }
+    }
+
+    .toolsSection {
+        padding: 0 20px;
+        
+        .toolsContainer {
+            .toolsGrid {
+                grid-template-columns: 1fr;
+                
+                .toolItem {
+                    h4 { font-size: 6vw; }
+                    p { font-size: 4vw; }
+                }
+            }
+        }
+    }
+}

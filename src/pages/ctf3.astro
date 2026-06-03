@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <div class="event-header gsap-reveal">
+    <a href="/xp0z-writeups/" class="back-btn">&larr; Directory</a>
+    <h1 class="event-title">CTF 3</h1>
+    
+    <div class="meta-tags">
+      <span class="pill-tag">Status: Upcoming</span>
+    </div>
+  </div>
+
+  <div class="targets-section">
+    <h2 class="section-title gsap-reveal">Acquired Targets</h2>
+    <div class="target-list gsap-stagger-container">
+      <div class="empty-state gsap-stagger-item">
+        No writeups available yet. Awaiting event start...
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .event-header {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    padding-top: 40px;
+  }
+  
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 40px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .back-btn:hover { color: var(--text-main); }
+  
+  .event-title {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    margin-bottom: 30px;
+    color: #000000;
+  }
+  
+  .meta-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 50px;
+  }
+  
+  .pill-tag {
+    padding: 8px 20px;
+    background: var(--btn-secondary-bg);
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+  
+  .targets-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    letter-spacing: -0.03em;
+    color: #000000;
+  }
+  
+  .target-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .empty-state {
+    padding: 30px;
+    text-align: center;
+    color: var(--text-muted);
+    background: var(--btn-secondary-bg);
+    border-radius: 16px;
+    font-weight: 500;
+  }
+</style>
