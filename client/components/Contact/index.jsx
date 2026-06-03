@@ -33,7 +33,7 @@ export default function Index() {
                             <Image 
                             fill={true}
                             alt={"image"}
-                            src={`/images/logo1.png`}
+                            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logo1.png`}
                             />
                         </div>
                         <h2>Let's work</h2>

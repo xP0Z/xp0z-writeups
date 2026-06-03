@@ -48,7 +48,7 @@ export default function Index({modal, projects}) {
                 const { src, color } = project
                 return <div className={styles.modal} style={{backgroundColor: color}} key={`modal_${index}`}>
                     <Image 
-                    src={`/images/${src}`}
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/${src}`}
                     width={300}
                     height={200}
                     style={{ height: "auto" }}

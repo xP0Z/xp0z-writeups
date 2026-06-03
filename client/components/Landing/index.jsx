@@ -54,7 +54,7 @@ export default function Index({ withPreloader = false }) {
     <motion.main custom={withPreloader} variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
       {mounted && theme !== 'dark' && (
         <div className={styles.logoContainer}>
-          <Image src="/images/logo1.png" fill={true} alt="Logo" style={{ objectFit: 'cover' }} />
+          <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logo1.png`} fill={true} alt="Logo" style={{ objectFit: 'cover' }} />
         </div>
       )}
       <div className={styles.sliderContainer}>

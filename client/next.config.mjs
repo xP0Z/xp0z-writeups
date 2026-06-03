@@ -6,6 +6,9 @@ const nextConfig = {
   assetPrefix: isProd ? '/xp0z-writeups/' : '',
   images: {
     unoptimized: true,
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProd ? '/xp0z-writeups' : '',
   }
 };
 
