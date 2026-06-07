@@ -47,7 +47,7 @@ export default function CitCtfClient({ writeups }) {
                         </div>
                         <div className={styles.column}>
                             <h3>RANK</h3>
-                            <p>92nd | 20892 pts</p>
+                            <p>92nd | 1520 pts</p>
                         </div>
                         <div className={styles.column}>
                             <h3>DATE</h3>
