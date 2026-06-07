@@ -39,7 +39,7 @@ export default function CitCtfClient({ writeups }) {
             <Header />
             <div className={styles.pageContent}>
                 <section className={styles.hero}>
-                    <motion.h1 variants={slideUp} initial="initial" animate="enter">CIT@CTF</motion.h1>
+                    <motion.h1 variants={slideUp} initial="initial" animate="enter">DalCTF</motion.h1>
                     <motion.div className={styles.meta} variants={slideUp} initial="initial" animate="enter">
                         <div className={styles.column}>
                             <h3>TEAM</h3>
@@ -50,8 +50,8 @@ export default function CitCtfClient({ writeups }) {
                             <p>87th | 20892 pts</p>
                         </div>
                         <div className={styles.column}>
-                            <h3>date</h3>
-                            <p>17-20 Apr/26</p>
+                            <h3>DATE</h3>
+                            <p>6-7 Jun/26</p>
                         </div>
                     </motion.div>
                 </section>
