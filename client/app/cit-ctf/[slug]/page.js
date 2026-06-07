@@ -35,7 +35,6 @@ export default async function WriteupPage({ params }) {
           <article className={styles.article}>
             <header className={styles.header}>
               <h1>{writeup.meta.title}</h1>
-              {writeup.meta.date && <time>{writeup.meta.date}</time>}
             </header>
             <div className={styles.markdownBody}>
               <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
