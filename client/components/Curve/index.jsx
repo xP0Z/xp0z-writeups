@@ -47,6 +47,7 @@ export default function Curve({children, isInitialLoad}) {
     let routeName = routes[pathname] || "xp0zure";
     if (pathname.startsWith('/cit-ctf')) routeName = "CIT@CTF";
     if (pathname.startsWith('/ramunchers-ctf')) routeName = "Ramunchers CTF";
+    if (pathname.startsWith('/dal-ctf')) routeName = "DalCTF";
 
     return (
     <div className={styles.curve}>
