@@ -5,10 +5,14 @@ event: "DalCTF"
 ---
 
 > CHALLENGE DESCRIPTION
-> Write your challenge description here.
+> So much space to explore!
+> 
+> [https://geosint.dalctf2026.com/](https://geosint.dalctf2026.com/)
 
 > METHODOLOGY
-> Write your methodology here.
+> ![](/images/dalctf/Screenshot%202026-06-07%20at%205.25.02%20AM.png)
+> 
+> ![](/images/dalctf/Screenshot%202026-06-07%20at%205.25.56%20AM.png)
 
 > THE FLAG
-`DalCTF{example_flag}`
+`dalctf{n4p0l30n}`
