@@ -5,10 +5,15 @@ event: "DalCTF"
 ---
 
 > CHALLENGE DESCRIPTION
-> Write your challenge description here.
+> Take me to the candy shop
+> 
+> [https://geosint.dalctf2026.com/](https://geosint.dalctf2026.com/)
 
 > METHODOLOGY
-> Write your methodology here.
+> 
+> ![](/images/dalctf/Screenshot%202026-06-06%20at%2010.09.40%20PM.png)
+> 
+> ![](/images/dalctf/Screenshot%202026-06-06%20at%2010.10.01%20PM.png)
 
 > THE FLAG
-`DalCTF{example_flag}`
+`dalctf{h3lv3t3}`
