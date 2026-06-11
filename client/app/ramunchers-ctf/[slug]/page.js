@@ -8,6 +8,7 @@ import Contact from '../../../components/Contact';
 import CurveFooter from '../../../components/CurveFooter';
 import styles from './style.module.scss';
 import Link from 'next/link';
+import ScrollInit from '../../../components/ScrollInit';
 
 export function generateStaticParams() {
   const writeups = getWriteupsByEvent("RAMunchers CTF");
@@ -26,6 +27,7 @@ export default async function WriteupPage({ params }) {
 
   return (
     <main className={styles.main}>
+      <ScrollInit />
       <Header />
       <div className={styles.pageContent}>
         <div className={styles.container}>
