@@ -8,6 +8,13 @@ event: "DalCTF"
 
 > METHODOLOGY
 > 
+> ![](/images/dalctf/cad01.png)
+> 
+> ![](/images/dalctf/cad02.png)
+> 
+> ![](/images/dalctf/cad03.png)
+> 
+> ![](/images/dalctf/cad04.png)
 
 > THE FLAG
 `dalctf{}`
