@@ -31,6 +31,11 @@ export function getWriteupsByEvent(eventName) {
     .map((slug) => getWriteupBySlug(slug))
     .filter((writeup) => writeup.meta.event === eventName)
     // sort by date or title, currently they don't have dates in frontmatter, so just sort by title
-    .sort((a, b) => (a.meta.title > b.meta.title ? 1 : -1));
+    .sort((a, b) => {
+      if (a.meta.order !== undefined && b.meta.order !== undefined) {
+        return a.meta.order - b.meta.order;
+      }
+      return a.meta.title > b.meta.title ? 1 : -1;
+    });
   return writeups;
 }
