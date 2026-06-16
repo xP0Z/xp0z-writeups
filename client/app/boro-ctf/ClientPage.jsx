@@ -43,15 +43,15 @@ export default function BoroCtfClient({ writeups }) {
                     <motion.div className={styles.meta} variants={slideUp} initial="initial" animate="enter">
                         <div className={styles.column}>
                             <h3>TEAM</h3>
-                            <p>Rayleigh</p>
+                            <p>c4tw1z4rd</p>
                         </div>
                         <div className={styles.column}>
                             <h3>RANK</h3>
-                            <p>92nd | 1520 pts</p>
+                            <p>8th | 17100 pts</p>
                         </div>
                         <div className={styles.column}>
                             <h3>DATE</h3>
-                            <p>6-7 Jun/26</p>
+                            <p>13-16Jun/26</p>
                         </div>
                     </motion.div>
                 </section>
