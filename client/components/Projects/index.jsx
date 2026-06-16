@@ -6,6 +6,11 @@ import Link from 'next/link';
 
 const projects = [
   {
+    title: "boroCTF",
+    type: "Writeups",
+    href: "/boro-ctf"
+  },
+  {
     title: "DalCTF",
     type: "Writeups",
     href: "/dal-ctf"
